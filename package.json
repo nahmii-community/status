@@ -1,6 +1,6 @@
 {
   "name": "status",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "rm -rf build && svelte-kit build && touch build/.nojekyll",
