@@ -3,43 +3,39 @@
 	let isLoading = true;
 	
 	var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
+	myHeaders.append("Content-Type", "application/json");
 
-var raw = JSON.stringify({
-  "jsonrpc": "2.0",
-  "method": "web3_clientVersion",
-  "params": [],
-  "id": 1
-});
+	var raw = JSON.stringify({
+	"jsonrpc": "2.0",
+	"method": "web3_clientVersion",
+	"params": [],
+	"id": 1
+	});
 
-var requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
+	var requestOptions = {
+	method: 'POST',
+	headers: myHeaders,
+	body: raw,
+	redirect: 'follow'
+	};
 	
-let servers = [
-		{ id: 'test', name: 'Nahmii Testnet', url: "https://l2-tc3.test.nahmii.net"},
-		{ id: 'ropsten', name: 'Nahmii Ropsten', url: "https://l2.testnet.nahmii.io"},
-		{ id: 'mainnet', name: 'Nahmii Mainnet', url: "https://path/to/mainnet"}
-	];
+	let servers = [
+			{ id: 'test', name: 'Nahmii Testnet', url: "https://l2-tc3.test.nahmii.net"},
+			{ id: 'ropsten', name: 'Nahmii Ropsten', url: "https://l2.testnet.nahmii.io"},
+			{ id: 'mainnet', name: 'Nahmii Mainnet', url: "https://path/to/mainnet"}
+		];
 
-// collection of statuses
-export let statuses = [];
+	// collection of statuses
+	export let statuses = [];
 
 	async function getServers(servers) {
 		
-			for (let server of servers) { 
-// 			console.log(server);
-
-				statuses = [...statuses, await getServerVersion(server)];
-			}
-			console.log(statuses);
-	} 
+		for (let server of servers) { 
+			statuses = [...statuses, await getServerVersion(server)];
+		}
+	}
 	
 	async function getServerVersion(server) {
-// 		console.log(server.url)
 		let res, json;
 		try {
 			res = await fetch(server.url, requestOptions);
@@ -51,12 +47,10 @@ export let statuses = [];
 			return {status: true, name: server.name};
 		} else {
 			return {status: false, name: server.name};
-// 			throw new Error(json);
 		}
 	}
 	onMount( async() => {
 		await getServers(servers);
-// 		console.log(statuses);
 		isLoading = false;
 	});
 </script>
