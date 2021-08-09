@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+
+		
+
+		<link rel="modulepreload" href="/status/_app/start-587b4fbd.js">
+		<link rel="modulepreload" href="/status/_app/chunks/vendor-d9b3091e.js">
+		<link rel="modulepreload" href="/status/_app/layout.svelte-c3a0aed8.js">
+		<link rel="modulepreload" href="/status/_app/pages/index.svelte-be4d3d3c.js">
+		<link rel="stylesheet" href="/status/_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/status/_app/assets/pages/index.svelte-1600d812.css">
+
+		<script type="module">
+			import { start } from "/status/_app/start-587b4fbd.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"/status","assets":"/status"},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/status/_app/layout.svelte-c3a0aed8.js"),
+						import("/status/_app/pages/index.svelte-be4d3d3c.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<h1 style="font-style: italic">System Status
+</h1>
+
+<p>...waiting</p>
+
+
+
+	
+</div>
+	</body>
+</html>
