@@ -32,8 +32,8 @@
 
 	let servers = [
 			// { id: 'test', name: 'Nahmii Testnet', url: "https://l2-tc3.test.nahmii.net"},
-			{ id: 'ropsten', name: 'Ropsten', url: "https://l2.testnet.nahmii.io", options: requestOptions},
 			{ id: 'mainnet', name: 'Mainnet', url: "https://path/to/mainnet", options: requestOptions},
+			{ id: 'ropsten', name: 'Ropsten', url: "https://l2.testnet.nahmii.io", options: requestOptions},
 			{ id: 'explorer', name: 'Explorer', url: "https://explorer.testnet.nahmii.io", options: getHtmlRequestOptions},
 			{ id: 'deployer', name: 'Deployer', url: 'https://meta.testnet.nahmii.io', options: getHtmlRequestOptions}
 		];
