@@ -1,5 +1,6 @@
 <script>
 	import ServerStatus from '../components/ServerStatus.svelte';
+	import Header from '../components/Header.svelte';
 	import { onMount } from 'svelte';
 
 	let isLoading = true;
@@ -72,6 +73,7 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <html class="nahmii-scaling-ethereum-background">
 	<body >
+		<Header />
 		<div class="status_card">
 			<div class="status_card_frame">
 				<h1 class="status_title">
