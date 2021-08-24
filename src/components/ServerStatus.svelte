@@ -24,6 +24,7 @@
     flex-direction: row
 }
 .service_name {
+    width: 100%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -36,7 +37,7 @@
     /* color: aliceblue */
 }
 .good_status {
-    width: 100%;
+    width: 50%;
     color: #00CC39;
     font-family: Roboto;
     font-style: normal;
@@ -45,11 +46,12 @@
     line-height: 23px;
     letter-spacing: 0.15px;
     margin: auto;
-    padding-left: 1rem
+    padding-left: 1rem;
+    text-align: right;
 }
 
 .bad_status {
-    width: 100%;
+    width: 50%;
     color: red;
     font-family: Roboto;
     font-style: normal;
@@ -58,7 +60,8 @@
     line-height: 23px;
     letter-spacing: 0.15px;
     margin: auto;
-    padding-left: 1rem
+    padding-left: 1rem;
+    text-align: right;
 }
 .status_line_seperator {
     
