@@ -161,7 +161,7 @@
 
 	/* Nahmii Status title */
 	.status_title {
-		background: -webkit-linear-gradient(#FF44C9, #00B8FA);
+		background: -webkit-linear-gradient(45deg,#FF44C9 0%, #00B8FA 100%);
 		background-clip: unset;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
