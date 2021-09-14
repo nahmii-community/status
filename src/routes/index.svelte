@@ -142,12 +142,8 @@
 	}
 
 	.status_card_frame {
-		position: static;
-		width: 386px;
-		height: 315px;
 		left: 32px;
 		top: 32px;
-
 		/* Inside Auto Layout */
 		flex: none;
 		order: 0;
