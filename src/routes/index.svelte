@@ -1,8 +1,9 @@
 <script>
 	import { onMount } from "svelte";
-	import ServerStatus from "../components/ServerStatus.svelte";
-	import Header from "../components/Header.svelte";
+	import Card from "../components/Card.svelte";
 	import GradientTitle from "../components/GradientTitle.svelte";
+	import Header from "../components/Header.svelte";
+	import ServerStatus from "../components/ServerStatus.svelte";
 
 	let isLoading = true;
 
@@ -108,44 +109,30 @@
 <html class="nahmii-scaling-ethereum-background">
 	<body>
 		<Header />
-		<div class="status_card">
-			<div class="status_card_frame">
-				<GradientTitle fontSize="26px" marginTop="0" marginBottom="0.5em"
-					>Nahmii Status</GradientTitle
-				>
+		<div class="container">
+			<Card>
+				<div class="title">
+					<GradientTitle fontSize="26px">Nahmii Status</GradientTitle>
+				</div>
 				{#if isLoading}
 					<p class="waiting">...waiting</p>
 				{:else}
 					<ServerStatus stats={statuses} />
 				{/if}
-			</div>
+			</Card>
 		</div>
 	</body>
 </html>
 
 <style>
-	.status_card {
+	.container {
 		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 32px;
-		position: flex;
-        max-width: 450px;
+		max-width: 550px;
 		margin: auto;
-		top: 160px;
-		background: #ffffff;
-		box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
-		border-radius: 12px;
 	}
 
-	.status_card_frame {
-		left: 32px;
-		top: 32px;
-		flex: none;
-		order: 0;
-		align-self: stretch;
-		flex-grow: 1;
-		margin: 0px 10px;
+	.title {
+		margin-bottom: 1em;
 	}
 
 	.waiting {
