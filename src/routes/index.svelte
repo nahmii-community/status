@@ -121,7 +121,7 @@
 		{#if isLoading}
 			<p class="waiting">...waiting</p>
 		{:else}
-			<ServerStatus stats={statuses} />
+			<ServerStatus {statuses} />
 		{/if}
 	</Card>
 </div>

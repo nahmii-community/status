@@ -1,9 +1,9 @@
 <script>
-    export let stats;
-    $: console.log(`stats: ${stats}`);
+    export let statuses;
+    $: console.log(`statuses: ${statuses}`);
 </script>
 
-{#each stats as { status, name }, i}
+{#each statuses as { status, name }, i}
     <div class="status_line">
         <p class="service_name">{name}:</p>
         {#if status}
