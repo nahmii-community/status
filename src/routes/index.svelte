@@ -4,6 +4,7 @@
 	import GradientTitle from "../components/GradientTitle.svelte";
 	import Header from "../components/Header.svelte";
 	import ServerStatus from "../components/ServerStatus.svelte";
+	import '../app.css';
 
 	let isLoading = true;
 
@@ -105,30 +106,26 @@
 	});
 </script>
 
-<!-- svelte-ignore a11y-missing-attribute -->
-<html class="nahmii-scaling-ethereum-background">
-	<body>
-		<Header />
-		<div class="container">
-			<Card>
-				<div class="title">
-					<GradientTitle fontSize="26px">Nahmii Status</GradientTitle>
-				</div>
-				{#if isLoading}
-					<p class="waiting">...waiting</p>
-				{:else}
-					<ServerStatus stats={statuses} />
-				{/if}
-			</Card>
+<Header />
+<div class="container">
+	<Card>
+		<div class="title">
+			<GradientTitle fontSize="26px">Nahmii Status</GradientTitle>
 		</div>
-	</body>
-</html>
+		{#if isLoading}
+			<p class="waiting">...waiting</p>
+		{:else}
+			<ServerStatus stats={statuses} />
+		{/if}
+	</Card>
+</div>
 
 <style>
 	.container {
 		display: flex;
 		max-width: 550px;
 		margin: auto;
+		padding: 0 1em 4em 1em;
 	}
 
 	.title {
@@ -142,15 +139,5 @@
 		font-size: 26px;
 		line-height: 20px;
 		color: aliceblue;
-	}
-
-	.nahmii-scaling-ethereum-background {
-		position: absolute;
-		height: 100vh;
-		left: 0%;
-		right: 0.04%;
-		top: 0px;
-		background: url("../../static/nahmii-scaling-ethereum-background.png");
-		background-size: cover;
 	}
 </style>
