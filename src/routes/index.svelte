@@ -4,7 +4,7 @@
 	import GradientTitle from "../components/GradientTitle.svelte";
 	import Header from "../components/Header.svelte";
 	import ServerStatus from "../components/ServerStatus.svelte";
-	import '../app.css';
+	import "../app.css";
 
 	let isLoading = true;
 
@@ -110,7 +110,13 @@
 <div class="container">
 	<Card>
 		<div class="title">
-			<GradientTitle fontSize="26px">Nahmii Status</GradientTitle>
+			<GradientTitle
+				marginTop="0"
+				marginBottom="0"
+				fontSize="26px"
+				fontWeight="700"
+				letterSpacing="0.8px">Nahmii Status</GradientTitle
+			>
 		</div>
 		{#if isLoading}
 			<p class="waiting">...waiting</p>

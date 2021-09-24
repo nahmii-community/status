@@ -4,13 +4,17 @@
     export let marginBottom = "";
     export let textAlign = "left";
     export let fontSize = "32px";
+    export let fontWeight = "500";
+    export let letterSpacing = "0";
 </script>
 
 <h1 class="title" 
     style="{marginTop ? `margin-top: ${marginTop};` : ""}
     {marginBottom ? `margin-bottom: ${marginBottom};` : ""}
     {textAlign ? `text-align: ${textAlign};` : ""}
-    {fontSize ? `font-size: ${fontSize};` : ""}">
+    {fontSize ? `font-size: ${fontSize};` : ""}
+    {fontWeight ? `font-weight: ${fontWeight};` : ""}
+    {letterSpacing ? `letter-spacing: ${letterSpacing};` : ""}">
     <slot>{title}</slot>
 </h1>
 
@@ -25,7 +29,6 @@
         top: 0px;
         font-family: Roboto;
         font-style: normal;
-        font-weight: 500;
         letter-spacing: 0.15px;
         text-align: center;
     }
