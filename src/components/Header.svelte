@@ -17,6 +17,7 @@
 		padding: 0.75em;
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 3.25em;
 	}
 
 	.corner {
