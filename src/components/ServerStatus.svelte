@@ -4,29 +4,29 @@
 </script>
 
 {#each statuses as { status, name }, i}
-    <div class="status_line">
-        <p class="service_name">{name}:</p>
+    <div class="status-line">
+        <p class="service-name">{name}:</p>
         {#if status}
-            <span class="good_status">Up!</span>
+            <span class="good-status">Up!</span>
         {:else}
-            <span class="bad_status">Down!</span>
+            <span class="bad-status">Down!</span>
         {/if}
     </div>
 {/each}
 
 <style>
-    .status_line {
+    .status-line {
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
         padding-bottom: 0.75em;
     }
 
-    .status_line:last-child {
+    .status-line:last-child {
         border-bottom: none;
     }
 
-    .service_name {
+    .service-name {
         width: 100%;
         font-family: Roboto;
         font-style: normal;
@@ -39,9 +39,8 @@
         /* color: aliceblue */
     }
 
-    .good_status {
+    .good-status, .bad-status {
         width: 50%;
-        color: #00cc39;
         font-family: Roboto;
         font-style: normal;
         font-weight: 500;
@@ -53,17 +52,11 @@
         text-align: right;
     }
 
-    .bad_status {
-        width: 50%;
+    .good-status {
+        color: #00cc39;
+    }
+
+    .bad-status {
         color: red;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 23px;
-        letter-spacing: 0.15px;
-        margin: auto;
-        padding-left: 1rem;
-        text-align: right;
     }
 </style>
