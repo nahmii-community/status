@@ -29,19 +29,21 @@
 
 <style>
 	header {
+		padding: 0.75em;
 		display: flex;
 		justify-content: space-between;
 	}
 
 	.corner {
-		width: 5em;
-		height: 5em;
+		width: 3em;
+		height: 3em;
+		display: flex;
+		align-self: center;
 	}
 
 	.corner img {
-		padding: 0.5em;
-		width: 7em;
-		height: 7em;
+		width: 9em;
+		height: 3em;
 		object-fit: contain;
 	}
 
