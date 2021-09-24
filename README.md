@@ -1,5 +1,4 @@
-
-
+# Nahmii Status page
 
 status is a basic status display of the Nahmii networks. A live version can be found [here](https://nahmii-community.github.io/status/)
 
