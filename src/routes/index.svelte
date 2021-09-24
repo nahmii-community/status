@@ -1,7 +1,8 @@
 <script>
+	import { onMount } from "svelte";
 	import ServerStatus from "../components/ServerStatus.svelte";
 	import Header from "../components/Header.svelte";
-	import { onMount } from "svelte";
+	import GradientTitle from "../components/GradientTitle.svelte";
 
 	let isLoading = true;
 
@@ -109,7 +110,9 @@
 		<Header />
 		<div class="status_card">
 			<div class="status_card_frame">
-				<h1 class="status_title">Nahmii Status</h1>
+				<GradientTitle fontSize="26px" marginTop="0" marginBottom="0.5em"
+					>Nahmii Status</GradientTitle
+				>
 				{#if isLoading}
 					<p class="waiting">...waiting</p>
 				{:else}
@@ -126,10 +129,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 		padding: 32px;
-		position: absolute;
-		width: 450px;
-		height: 530px;
-		left: calc(50% - 450px / 2);
+		position: flex;
+        max-width: 450px;
+		margin: auto;
 		top: 160px;
 		background: #ffffff;
 		box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
@@ -144,25 +146,6 @@
 		align-self: stretch;
 		flex-grow: 1;
 		margin: 0px 10px;
-	}
-
-	.status_title {
-		background: -webkit-linear-gradient(45deg, #ff44c9 0%, #00b8fa 100%);
-		background-clip: unset;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		/* position: absolute; */
-		width: 167px;
-		height: 20px;
-		left: 0px;
-		top: 0px;
-
-		font-family: Roboto;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 26px;
-		line-height: 20px;
-		letter-spacing: 0.15px;
 	}
 
 	.waiting {
