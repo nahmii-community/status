@@ -90,18 +90,17 @@
 			console.log(server.name, res);
 			// json = await res.json();
 		} catch {
-			return { status: false, name: server.name };
+			return { status: false, name: server.name, description: server.description };
 		}
 		if (res.ok) {
 			return { status: true, name: server.name };
 		} else {
-			return { status: false, name: server.name };
+			return { status: false, name: server.name, description: server.description };
 		}
 	}
 
 	onMount(async () => {
 		await getServers(servers);
-		console.log(statuses);
 		isLoading = false;
 	});
 </script>
@@ -129,7 +128,7 @@
 <style>
 	.container {
 		display: flex;
-		max-width: 550px;
+		max-width: 500px;
 		margin: auto;
 		padding: 0 1em 4em 1em;
 	}
