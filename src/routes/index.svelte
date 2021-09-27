@@ -39,19 +39,19 @@
 		{
 			id: "mainnet-node",
 			name: "Mainnet Node",
-			url: "https://path/to/mainnet/node",
+			url: "https://l2.nahmii.io",
 			options: requestOptions,
 		},
 		{
 			id: "mainnet-explorer",
 			name: "Mainnet Explorer",
-			url: "https://path/to/mainnet/explorer",
+			url: "https://explorer.nahmii.io",
 			options: requestOptions,
 		},
 		{
 			id: "mainnet-meta-service",
 			name: "Mainnet Meta Service",
-			url: "https://path/to/mainnet/meta/service",
+			url: "https://meta.nahmii.io",
 			options: requestOptions,
 		},
 		{
