@@ -46,13 +46,13 @@
 			id: "mainnet-explorer",
 			name: "Mainnet Explorer",
 			url: "https://explorer.nahmii.io",
-			options: requestOptions,
+			options: getHtmlRequestOptions,
 		},
 		{
 			id: "mainnet-meta-service",
 			name: "Mainnet Meta Service",
 			url: "https://meta.nahmii.io",
-			options: requestOptions,
+			options: getHtmlRequestOptions,
 		},
 		{
 			id: "testnet-node",
