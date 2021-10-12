@@ -8,27 +8,27 @@
 
 	let isLoading = true;
 
-	var myHeaders = new Headers();
+	let myHeaders = new Headers();
 	myHeaders.append("Content-Type", "application/json");
 
-	var raw = JSON.stringify({
+	let raw = JSON.stringify({
 		jsonrpc: "2.0",
 		method: "web3_clientVersion",
 		params: [],
 		id: 1,
 	});
 
-	var requestOptions = {
+	let requestOptions = {
 		method: "POST",
 		headers: myHeaders,
 		body: raw,
 		redirect: "follow",
 	};
 
-	var htmlHeaders = new Headers();
+	let htmlHeaders = new Headers();
 	htmlHeaders.append("Content-Type", "application/html");
 
-	var getHtmlRequestOptions = {
+	let getHtmlRequestOptions = {
 		method: "GET",
 		headers: htmlHeaders,
 		redirect: "follow",
@@ -84,18 +84,24 @@
 	}
 
 	async function getServerVersion(server) {
-		let res, json;
+		let res;
 		try {
 			res = await fetch(server.url, server.options);
-			console.log(server.name, res);
-			// json = await res.json();
 		} catch {
-			return { status: false, name: server.name, description: server.description };
+			return {
+				status: false,
+				name: server.name,
+				description: server.description,
+			};
 		}
 		if (res.ok) {
 			return { status: true, name: server.name };
 		} else {
-			return { status: false, name: server.name, description: server.description };
+			return {
+				status: false,
+				name: server.name,
+				description: server.description,
+			};
 		}
 	}
 
